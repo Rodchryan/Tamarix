@@ -23,7 +23,7 @@ font-family: 'Poppins',sans-serif;
   min-height: 100vh;
   background-attachment: fixed;
   background-size: cover;
-  background: #07bdf4;
+  background:#1cc7d0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -199,6 +199,119 @@ input[type="checkbox"]{
     color: cyan;
   }
 }
+
+
+
+.wrapper{
+display: inline-flex;
+}
+
+.wrapper .static-txt{
+color: red;
+font-size: 60px;
+font-weight: 400;
+}
+
+.wrapper .dynamic-txts{
+margin-left: 15px;
+line-height: 90px;
+height: 90px;
+overflow: hidden;
+}
+
+.dynamic-txts li{
+color: blue;
+list-style: none;
+font-size: 60px;
+font-weight: 500;
+position: relative;
+top: 0;
+animation: slide 14s steps(4) infinite;
+}
+
+@keyframes slide {
+100%{
+top: -360px;
+}
+}
+.dynamic-txts li span{
+position: relative;
+}
+
+.dynamic-txts li span::after{
+content:"";
+position: absolute;
+left: 0;
+height: 100%;
+width: 100%;
+background: #1cc7d0;
+border-left: 2px solid #FC6D6D;
+animation: typing 3.5s steps(10) infinite;
+}
+
+@keyframes typing {
+100%{
+left: 100%;
+margin: 0 -35px 0 35px;
+}
+}
+
+
+.puta{
+font-size: 63px;
+}
+
+.hui{
+display: flex;
+align-items: center;
+justify-content: center;
+min-height: 20vh;
+background: black;
+}
+
+.joey{
+position: absolute;
+top: 20%;
+left: 20%;
+
+}
+
+h4 {
+position: relative;
+font-size: 7vw;
+color: WHITE;
+-webkit-text-stroke: 0.3vw #383d52;
+text-transform: uppercase;
+}
+
+h4::before {
+content: attr(data-text);
+position: absolute;
+top: 0;
+left: 0;
+width: 0;
+height: 100%;
+color: #01fe87;
+-webkit-text-stroke: 0vw #383d52;
+border-right: 2px solid #01fe87;
+overflow: hidden;
+animation: cat 6s linear infinite;
+}
+
+@keyframes cat { 0%,10%,100%
+{ width: 0;
+}
+70%,90%
+{
+width: 100%;
+}
+
+.bobo {
+position: absolute;
+top: 80%;
+
+
+}
   </style>
 </head>
 
@@ -221,8 +334,20 @@ input[type="checkbox"]{
             <li><a href="https://rodchryan.github.io/Tamarix/try.html">Teachers</a></li>
          </ul>
       </nav>
+</div>
+<div class="joey"
+<div class="hui">
+<div class="wrapper">
+<div class="static-txt"><div class="puta">SCC</div></div>
+<ul class="dynamic-txts">
+<li><span>A Mark of Excellence.</span></li>
+<li><span>A Testimony of Faith.</span></li>
+<li><span>A Heart of Faith.</span></li>
+<li><span>Enroll Now!</span></li>
+<ul>
+</div></div></div>
 <div class="hey">
-<div class="carousel">
+<div class="carousel"><br><br>
   <div class="carousel__cards">
     <div class="carousel__card">
       <img class="carousel__img"
