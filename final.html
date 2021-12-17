@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>OFFICERS</title>
+   <style>
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+html,body{
+  display: grid;
+  height: 100%;
+  width: 100%;
+  place-items: center;
+  background: linear-gradient(375deg, blue, #1cc7d0);
+}
+::selection{
+  color: #fff;
+  background: #1cc7d0;
+}
+.wrapper{
+left: -80%;
+top: 20%;
+  height: 400px;
+  width: 320px;
+  position: relative;
+  transform-style: preserve-3d;
+ perspective: 1000px;
+
+}
+.wrapper .card{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  padding: 5px;
+  background: #fff;
+  border-radius: 10px;
+  transform: translateY(0deg);
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+  transition: transform 0.7s cubic-bezier(0.4,0.2,0.2,1);
+}
+.wrapper:hover > .front-face{
+  transform: rotateY(-180deg);
+}
+.wrapper .card img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.wrapper .back-face{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  transform: rotateY(180deg);
+}
+.wrapper:hover > .back-face{
+  transform: rotateY(0deg);
+}
+.wrapper .back-face img{
+  height: 150px;
+  width: 150px;
+  padding: 5px;
+  border-radius: 50%;
+  background: linear-gradient(375deg, #1cc7d0, #2ede98);
+}
+.wrapper .back-face .info{
+  text-align: center;
+}
+.back-face .info .title{
+  font-size: 20px;
+  font-weight: 500;
+}
+.back-face ul{
+  display: flex;
+}
+.back-face ul a{
+  display: block;
+  height: 40px;
+  width: 40px;
+  color: #fff;
+  text-align: center;
+  margin: 0 5px;
+  line-height: 38px;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  background: linear-gradient(375deg, #1cc7d0, #2ede98);
+  transition: all 0.5s ease;
+}
+.back-face ul a:hover{
+  color: #1cc7d0;
+  border-color: #1cc7d0;
+  background: linear-gradient(375deg, transparent, transparent);
+}
+
+@media screen and (max-width: 800px) {
+.wrapper{
+left: 0;
+height: 267px;
+  width: 212px;
+}
+
+.wrapper .back-face img{
+  height: 100px;
+  width: 100px;
+ 
+}
+}
+
+
+
+
+
+
+.wrappers{
+right: -80%;
+  height: 400px;
+  width: 320px;
+  position: relative;
+  transform-style: preserve-3d;
+ perspective: 1000px;
+}
+.wrappers .card{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  padding: 5px;
+  background: #fff;
+  border-radius: 10px;
+  transform: translateY(0deg);
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+  transition: transform 0.7s cubic-bezier(0.4,0.2,0.2,1);
+}
+.wrappers:hover > .front-face{
+  transform: rotateY(-180deg);
+}
+.wrappers .card img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.wrappers .back-face{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  transform: rotateY(180deg);
+}
+.wrappers:hover > .back-face{
+  transform: rotateY(0deg);
+}
+.wrappers .back-face img{
+  height: 150px;
+  width: 150px;
+  padding: 5px;
+  border-radius: 50%;
+  background: linear-gradient(375deg, #1cc7d0, #2ede98);
+}
+.wrappers .back-face .info{
+  text-align: center;
+}
+
+
+@media screen and (max-width: 800px) {
+.wrappers{
+left: 0;
+height: 267px;
+  width: 212px;
+}
+
+.wrappers .back-face img{
+  height: 100px;
+  width: 100px;
+ 
+}
+}
+
+.wrapperb{
+right: -30%;
+top: -200%;
+  height: 400px;
+  width: 320px;
+  position: relative;
+  transform-style: preserve-3d;
+ perspective: 1000px;
+}
+.wrapperb .card{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  padding: 5px;
+  background: #fff;
+  border-radius: 10px;
+  transform: translateY(0deg);
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+  transition: transform 0.7s cubic-bezier(0.4,0.2,0.2,1);
+}
+.wrapperb:hover > .front-face{
+  transform: rotateY(-180deg);
+}
+.wrapperb .card img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.wrapperb .back-face{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  transform: rotateY(180deg);
+}
+.wrapperb:hover > .back-face{
+  transform: rotateY(0deg);
+}
+.wrapperb .back-face img{
+  height: 150px;
+  width: 150px;
+  padding: 5px;
+  border-radius: 50%;
+  background: linear-gradient(375deg, #1cc7d0, #2ede98);
+}
+.wrapperb .back-face .info{
+  text-align: center;
+}
+
+
+@media screen and (max-width: 800px) {
+.wrapperb{
+left: 0;
+height: 267px;
+  width: 212px;
+}
+
+.wrapperb .back-face img{
+  height: 100px;
+  width: 100px;
+ 
+}
+}
+
+
+.glitch {
+  font-size: 8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  position: relative;
+
+  text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+    -0.025em -0.05em 0 rgba(0, 255, 0, 0.75),
+    0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+
+  animation: glitch 500ms infinite;
+}
+
+.glitch span {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.glitch span:first-child {
+  animation: glitch 650ms infinite;
+  clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+  transform: translate(-0.025em, -0.0125em);
+  
+  opacity: 0.8;
+}
+
+.glitch span:last-child {
+  animation: glitch 375ms infinite;
+  clip-path: polygon(0 80%, 100% 20%, 100% 100%, 0 100%);
+  transform: translate(0.0125em, 0.025em);
+ 
+  opacity: 0.8;
+}
+
+
+
+@keyframes glitch {
+  0% {
+    text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+      -0.05em -0.025em 0 rgba(0, 255, 0, 0.75),
+      -0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  14% {
+    text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+      -0.05em -0.025em 0 rgba(0, 255, 0, 0.75),
+      -0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  15% {
+    text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75),
+      0.025em 0.025em 0 rgba(0, 255, 0, 0.75),
+      -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  49% {
+    text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75),
+      0.025em 0.025em 0 rgba(0, 255, 0, 0.75),
+      -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  50% {
+    text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75),
+      0.05em 0 0 rgba(0, 255, 0, 0.75), 0 -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  99% {
+    text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75),
+      0.05em 0 0 rgba(0, 255, 0, 0.75), 0 -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  100% {
+    text-shadow: -0.025em 0 0 rgba(255, 0, 0, 0.75),
+      -0.025em -0.025em 0 rgba(0, 255, 0, 0.75),
+      -0.025em -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-delay: -1ms !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    background-attachment: initial !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0s !important;
+    transition-delay: 0s !important;
+  }
+}
+@media screen and (max-width: 800px) {
+.glitch{
+font-size: 4rem;
+  font-weight: 700;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+nav{
+  display: flex;
+  height: 80px;
+  width: 100%;
+  background: #1b1b1b;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px 0 100px;
+  flex-wrap: wrap;
+}
+nav .logo{
+  color: #fff;
+  font-size: 35px;
+  font-weight: 600;
+}
+nav ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+nav ul li{
+  margin: 0 5px;
+}
+nav ul li a{
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+nav ul li a.active,
+nav ul li a:hover{
+  color: #111;
+  background: #fff;
+}
+nav .menu-btn i{
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+input[type="checkbox"]{
+  display: none;
+}
+@media (max-width: 1000px){
+  nav{
+    padding: 0 40px 0 50px;
+  }
+}
+@media (max-width: 920px) {
+  nav .menu-btn i{
+    display: block;
+  }
+  #click:checked ~ .menu-btn i:before{
+    content: "\f00d";
+  }
+  nav ul{
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background: #111;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  #click:checked ~ ul{
+    left: 0;
+  }
+  nav ul li{
+    width: 100%;
+    margin: 40px 0;
+  }
+  nav ul li a{
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  #click:checked ~ ul li a{
+    margin-left: 0px;
+  }
+  nav ul li a.active,
+  nav ul li a:hover{
+    background: none;
+    color: cyan;
+  }
+}
+.content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: -1;
+  width: 100%;
+  padding: 0 30px;
+  color: #1b1b1b;
+}
+.content div{
+  font-size: 40px;
+  font-weight: 700;
+}
+</style>
+  </head>
+  <body>
+<nav>
+         <div class="logo">
+            Tamarix
+         </div>
+         <input type="checkbox" id="click">
+         <label for="click" class="menu-btn">
+         <i class="fas fa-bars"></i>
+         </label>
+         <ul>
+            <li><a href="https://rodchryan.github.io/Tamarix/home.html">Home</a></li>
+            <li><a href="https://rodchryan.github.io/Tamarix/gal.html">Gallery</a></li>
+            <li><a href="https://rodchryan.github.io/Tamarix/regis.html">Register</a></li>
+            <li><a class="active" href="https://rodchryan.github.io/Tamarix/final.html">Officers</a></li>
+            <li><a href="https://rodchryan.github.io/Tamarix/try.html">Teachers</a></li>
+         </ul>
+      </nav>
+      
+
+
+
+
+
+
+
+
+
+
+<h1 class="glitch">
+  <span aria-hidden="true">OFFICERS</span>
+  OFFICERS
+  <span aria-hidden="true">OFFICERS</span>
+</h1>
+    
+<br><br><br>
+<div>
+<div class="wrapper">
+      <div class="card front-face">
+        <img src="https://scontent.fmnl30-1.fna.fbcdn.net/v/t1.15752-9/264487214_3113033222307390_6723922425859993451_n.jpg?_nc_cat=103&ccb=1-5&_nc_sid=ae9488&_nc_eui2=AeFCdi7rpho-aNrNUioE4mU_ZqvuIknyiHhmq-4iSfKIeJFLcLSpyAUf9YPzZ5oBexzClvedhqvg2jfrbe2KBWdq&_nc_ohc=X4JZuKPF9C8AX-oM6kx&_nc_ht=scontent.fmnl30-1.fna&oh=03_AVJrKMvVtS3rocvgrSpX-7hazfCCmy-RRIstzsX3NpXAKA&oe=61DF1C58">
+      </div>
+      <div class="card back-face">
+        <img src="https://scontent.fmnl30-1.fna.fbcdn.net/v/t1.15752-9/264487214_3113033222307390_6723922425859993451_n.jpg?_nc_cat=103&ccb=1-5&_nc_sid=ae9488&_nc_eui2=AeFCdi7rpho-aNrNUioE4mU_ZqvuIknyiHhmq-4iSfKIeJFLcLSpyAUf9YPzZ5oBexzClvedhqvg2jfrbe2KBWdq&_nc_ohc=X4JZuKPF9C8AX-oM6kx&_nc_ht=scontent.fmnl30-1.fna&oh=03_AVJrKMvVtS3rocvgrSpX-7hazfCCmy-RRIstzsX3NpXAKA&oe=61DF1C58">
+        <div class="info">
+          <div class="title">Rodch Ryan C. Sagales</div>
+          <p>President</p>
+        </div>
+        
+      </div>
+    </div>
+</div>
+<br><br><br>
+<div>
+<div class="wrappers">
+      <div class="card front-face">
+        <img src="https://scontent.fmnl30-2.fna.fbcdn.net/v/t1.15752-9/265512772_659817861677656_8524511454095268328_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=ae9488&_nc_eui2=AeHTeFJoA3mqTZEufLPEgTzBQwpIum8mvGRDCki6bya8ZGuoEYIkF9s1hWnsqWnruxqyNybbiNWKgQzkgELK9bEF&_nc_ohc=9ZBqoFSob1UAX-ohVDa&_nc_ht=scontent.fmnl30-2.fna&oh=03_AVLHsISAqXuiw3dfBkwS1v63Npk3klEeW_PNTJPE85C0Og&oe=61DFF00C">
+      </div>
+      <div class="card back-face">
+        <img src="https://scontent.fmnl30-2.fna.fbcdn.net/v/t1.15752-9/265512772_659817861677656_8524511454095268328_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=ae9488&_nc_eui2=AeHTeFJoA3mqTZEufLPEgTzBQwpIum8mvGRDCki6bya8ZGuoEYIkF9s1hWnsqWnruxqyNybbiNWKgQzkgELK9bEF&_nc_ohc=9ZBqoFSob1UAX-ohVDa&_nc_ht=scontent.fmnl30-2.fna&oh=03_AVLHsISAqXuiw3dfBkwS1v63Npk3klEeW_PNTJPE85C0Og&oe=61DFF00C">
+        <div class="info">
+          <div class="title">Nicole Jinky Y. Castromero</div>
+          <p>Vice President</p>
+        </div>
+        
+      </div>
+    </div>
+</div>
+<br><br><br>
+<div>
+<div class="wrapper">
+      <div class="card front-face">
+        <img src="https://scontent.fmnl30-2.fna.fbcdn.net/v/t1.15752-9/265676371_1562759790741883_7718095065063060882_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=ae9488&_nc_eui2=AeHg7BtdIVzY0Nw6gojMESLgxNhex1z4F2vE2F7HXPgXa7sTnRXRGsumvIhtBmAxYWTmUnRtibikodTRYh_TeN7T&_nc_ohc=1y9a0SctTPMAX9hLAL0&_nc_ht=scontent.fmnl30-2.fna&oh=03_AVLKgTAXNLQztlhMFkbAt-9yYRBxPKHiuFd1H2LcIbat7Q&oe=61E1A571">
+      </div>
+      <div class="card back-face">
+        <img src="https://scontent.fmnl30-2.fna.fbcdn.net/v/t1.15752-9/265676371_1562759790741883_7718095065063060882_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=ae9488&_nc_eui2=AeHg7BtdIVzY0Nw6gojMESLgxNhex1z4F2vE2F7HXPgXa7sTnRXRGsumvIhtBmAxYWTmUnRtibikodTRYh_TeN7T&_nc_ohc=1y9a0SctTPMAX9hLAL0&_nc_ht=scontent.fmnl30-2.fna&oh=03_AVLKgTAXNLQztlhMFkbAt-9yYRBxPKHiuFd1H2LcIbat7Q&oe=61E1A571">
+        <div class="info">
+          <div class="title">Jerez Noriel G. Bondad</div>
+          <p>Secretary</p>
+        </div>
+        
+      </div>
+    </div>
+</div>
+<br><br><br>
+<div>
+<div class="wrappers">
+      <div class="card front-face">
+        <img src="https://scontent.fmnl30-1.fna.fbcdn.net/v/t1.15752-9/265285988_3901400989963250_6464937948755047750_n.jpg?_nc_cat=108&ccb=1-5&_nc_sid=ae9488&_nc_eui2=AeH2TlGf3q-76guhVQYVj9m-oB4Oc_yce1igHg5z_Jx7WG7sAYhFWW6N88Gb0YNxow1pk0uYeYKVfxTJ7SdJyMYX&_nc_ohc=GdSvW1YjZhUAX8PPv0y&_nc_ht=scontent.fmnl30-1.fna&oh=03_AVLByt8rTYHf1EhtCII-T4qBpij9l_ljNzS4aTX1c00SEg&oe=61E27262">
+      </div>
+      <div class="card back-face">
+        <img src="https://scontent.fmnl30-1.fna.fbcdn.net/v/t1.15752-9/265285988_3901400989963250_6464937948755047750_n.jpg?_nc_cat=108&ccb=1-5&_nc_sid=ae9488&_nc_eui2=AeH2TlGf3q-76guhVQYVj9m-oB4Oc_yce1igHg5z_Jx7WG7sAYhFWW6N88Gb0YNxow1pk0uYeYKVfxTJ7SdJyMYX&_nc_ohc=GdSvW1YjZhUAX8PPv0y&_nc_ht=scontent.fmnl30-1.fna&oh=03_AVLByt8rTYHf1EhtCII-T4qBpij9l_ljNzS4aTX1c00SEg&oe=61E27262">
+        <div class="info">
+          <div class="title">Ralph Luis A. Lontoc</div>
+          <p>Treasurer</p>
+        </div>
+        
+      </div>
+    </div>
+</div>
+<br><br><br>
+<div>
+<div class="wrapper">
+      <div class="card front-face">
+        <img src="https://scontent.fmnl30-1.fna.fbcdn.net/v/t1.15752-9/264242117_461548838730509_5255423974605361287_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=ae9488&_nc_eui2=AeG0yei_5U8CkphTE9XrGbiMJB2TuRX9bgIkHZO5Ff1uAnGnJpnSJVjkEgFybe-kDJWnSY2yr35dRwfTqQQXZIYb&_nc_ohc=iY5neCo4f0UAX-QXjsi&tn=0ZFhopv27RlIRkv2&_nc_ht=scontent.fmnl30-1.fna&oh=03_AVLWKEsqNRPive8FGOaIQMvcT6yV-qwhu-iytrxomD9WGg&oe=61E070E9">
+      </div>
+      <div class="card back-face">
+        <img src="https://scontent.fmnl30-1.fna.fbcdn.net/v/t1.15752-9/264242117_461548838730509_5255423974605361287_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=ae9488&_nc_eui2=AeG0yei_5U8CkphTE9XrGbiMJB2TuRX9bgIkHZO5Ff1uAnGnJpnSJVjkEgFybe-kDJWnSY2yr35dRwfTqQQXZIYb&_nc_ohc=iY5neCo4f0UAX-QXjsi&tn=0ZFhopv27RlIRkv2&_nc_ht=scontent.fmnl30-1.fna&oh=03_AVLWKEsqNRPive8FGOaIQMvcT6yV-qwhu-iytrxomD9WGg&oe=61E070E9">
+        <div class="info">
+          <div class="title">Michael Justine O. Cruz</div>
+          <p>Auditor</p>
+        </div>
+        
+      </div>
+    </div>
+</div>
+<br><br><br>
+<div>
+<div class="wrappers">
+      <div class="card front-face">
+        <img src="https://scontent.fmnl30-1.fna.fbcdn.net/v/t1.15752-9/265237443_479697050246796_6142861081142055096_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=ae9488&_nc_eui2=AeGRssLOHZtGcIglgxxHQQ4Nafn8h69S8Tpp-fyHr1LxOoop-EF-DOXV0NAIXgofmH8KPmp9VrzH7xedhkiqTVBw&_nc_ohc=eGqHKu4umzIAX9_EQYW&_nc_ht=scontent.fmnl30-1.fna&oh=03_AVLN4f4gM1ptakhMG4-2OetWTCviDu5_fX16RJh25SiOQQ&oe=61E10C52">
+      </div>
+      <div class="card back-face">
+        <img src="https://scontent.fmnl30-1.fna.fbcdn.net/v/t1.15752-9/265237443_479697050246796_6142861081142055096_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=ae9488&_nc_eui2=AeGRssLOHZtGcIglgxxHQQ4Nafn8h69S8Tpp-fyHr1LxOoop-EF-DOXV0NAIXgofmH8KPmp9VrzH7xedhkiqTVBw&_nc_ohc=eGqHKu4umzIAX9_EQYW&_nc_ht=scontent.fmnl30-1.fna&oh=03_AVLN4f4gM1ptakhMG4-2OetWTCviDu5_fX16RJh25SiOQQ&oe=61E10C52">
+        <div class="info">
+          <div class="title">Jennifer Leigh S. Chio</div>
+          <p>Muse</p>
+        </div>
+        
+      </div>
+    </div>
+</div>
+<br><br><br>
+<div>
+<div class="wrapper">
+      <div class="card front-face">
+        <img src="https://scontent.fmnl30-1.fna.fbcdn.net/v/t1.15752-9/267667127_665233231146519_4588600482988800179_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=ae9488&_nc_eui2=AeEr3Xsdt3Rs3CKMDnVMazrSmgww1hHC9FWaDDDWEcL0VbLpQbC6QsfLUBR5ihFoc9LGs0vaNBFplC43szfreGNk&_nc_ohc=fseNJ4YJJWwAX917WZA&_nc_ht=scontent.fmnl30-1.fna&oh=03_AVLeka7yQAsSPpPbX4bbTNrLcchk7LMjzup-aH9gOC7OnA&oe=61E260C9">
+      </div>
+      <div class="card back-face">
+        <img src="https://scontent.fmnl30-1.fna.fbcdn.net/v/t1.15752-9/267667127_665233231146519_4588600482988800179_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=ae9488&_nc_eui2=AeEr3Xsdt3Rs3CKMDnVMazrSmgww1hHC9FWaDDDWEcL0VbLpQbC6QsfLUBR5ihFoc9LGs0vaNBFplC43szfreGNk&_nc_ohc=fseNJ4YJJWwAX917WZA&_nc_ht=scontent.fmnl30-1.fna&oh=03_AVLeka7yQAsSPpPbX4bbTNrLcchk7LMjzup-aH9gOC7OnA&oe=61E260C9">
+        <div class="info">
+          <div class="title">Gerrico S. Gonzales</div>
+          <p>Escort</p>
+        </div>
+        
+      </div>
+    </div>
+</div>
+<br><br><br>
+<div>
+
+
+
+
+
+
+
+
+  </body>
+</html>

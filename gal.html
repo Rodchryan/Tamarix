@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+<title>GALLERY</title>
+  <link href="https://fonts.googleapis.com/css?family=Staatliches&display=swap" rel="stylesheet">
+  <style media="screen">
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+ html {
+  box-sizing: border-box;
+}
+
+*, *::after, *::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+font-family: 'Poppins',sans-serif;
+}
+
+.hey {
+  font-family: sans-serif;
+  min-height: 100vh;
+  background-attachment: fixed;
+  background-size: cover;
+  background: #07bdf4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+    
+
+.carousel {
+  height: 60vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  perspective: 100rem;
+}
+.carousel__cards {
+  position: relative;
+  width: 20rem;
+  height: 20rem;
+  transform-style: preserve-3d;
+  transform: translateZ(-25rem);
+  transition: transform 0.3s ease-in;
+}
+.carousel__img {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.carousel__card {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border: 2px solid white;
+  border-radius: 0.2rem;
+  font-size: 3em;
+  font-weight: 700;
+}
+.carousel__card:nth-child(1) {
+  transform: rotateY(0deg) translateZ(25rem);
+}
+.carousel__card:nth-child(2) {
+  transform: rotateY(45deg) translateZ(25rem);
+}
+.carousel__card:nth-child(3) {
+  transform: rotateY(90deg) translateZ(25rem);
+}
+.carousel__card:nth-child(4) {
+  transform: rotateY(135deg) translateZ(25rem);
+}
+.carousel__card:nth-child(5) {
+  transform: rotateY(180deg) translateZ(25rem);
+}
+.carousel__card:nth-child(6) {
+  transform: rotateY(225deg) translateZ(25rem);
+}
+.carousel__card:nth-child(7) {
+  transform: rotateY(270deg) translateZ(25rem);
+}
+.carousel__card:nth-child(8) {
+  transform: rotateY(315deg) translateZ(25rem);
+}
+.carousel__btn {
+  outline: none;
+  border: none;
+  border-radius: 0.2rem;
+  background: #00599c;
+  padding: 0.5em 1em;
+  font-size: 1.2em;
+  font-weight: 500;
+  color: #ffffff;
+  cursor: pointer;
+  margin: 0 2rem;
+  margin-top: 20px;
+}
+.carousel__btn:hover {
+  transform: scale(1.04);
+  background: #000000;
+}
+    
+
+
+
+nav{
+  display: flex;
+  height: 80px;
+  width: 100%;
+  background: #1b1b1b;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px 0 100px;
+  flex-wrap: wrap;
+}
+nav .logo{
+  color: #fff;
+  font-size: 35px;
+  font-weight: 600;
+}
+nav ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+nav ul li{
+  margin: 0 5px;
+}
+nav ul li a{
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+nav ul li a.active,
+nav ul li a:hover{
+  color: #111;
+  background: #fff;
+}
+nav .menu-btn i{
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+input[type="checkbox"]{
+  display: none;
+}
+@media (max-width: 1000px){
+  nav{
+    padding: 0 40px 0 50px;
+  }
+}
+@media (max-width: 920px) {
+  nav .menu-btn i{
+    display: block;
+  }
+  #click:checked ~ .menu-btn i:before{
+    content: "\f00d";
+  }
+  nav ul{
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background: #111;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  #click:checked ~ ul{
+    left: 0;
+  }
+  nav ul li{
+    width: 100%;
+    margin: 40px 0;
+  }
+  nav ul li a{
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  #click:checked ~ ul li a{
+    margin-left: 0px;
+  }
+  nav ul li a.active,
+  nav ul li a:hover{
+    background: none;
+    color: cyan;
+  }
+}
+  </style>
+</head>
+
+<body>
+
+
+<nav>
+         <div class="logo">
+            Tamarix
+         </div>
+         <input type="checkbox" id="click">
+         <label for="click" class="menu-btn">
+         <i class="fas fa-bars"></i>
+         </label>
+         <ul>
+            <li><a href="https://rodchryan.github.io/Tamarix/home.html">Home</a></li>
+            <li><a class="active" href="https://rodchryan.github.io/Tamarix/gal.html">Gallery</a></li>
+            <li><a href="https://rodchryan.github.io/Tamarix/regis.html">Register</a></li>
+            <li><a href="https://rodchryan.github.io/Tamarix/final.html">Officers</a></li>
+            <li><a href="https://rodchryan.github.io/Tamarix/try.html">Teachers</a></li>
+         </ul>
+      </nav>
+<div class="hey">
+<div class="carousel">
+  <div class="carousel__cards">
+    <div class="carousel__card">
+      <img class="carousel__img"
+           src="https://scontent.fmnl30-2.fna.fbcdn.net/v/t1.15752-9/p403x403/269233365_945640572825182_6226747004136614018_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=aee45a&_nc_eui2=AeFHVDoayf_AiLpEyyDil-wZeD38HcsEpOx4PfwdywSk7Ff-ZjqIgcgcrjKakWpxBrJsAJLSd4hXXvWFQODmQu7c&_nc_ohc=Hor2wJz8pbsAX__1ZZN&_nc_ht=scontent.fmnl30-2.fna&oh=03_AVIYmFf8Jrr1FarhqvhOB0Lb0TTpnRRLqmNKJa2QFmYGMw&oe=61E2282C">
+    </div>
+    <div class="carousel__card">
+      <img class="carousel__img"
+           src="https://scontent.fmnl30-1.fna.fbcdn.net/v/t1.15752-9/p403x403/267294595_433520878274059_8404254469568391009_n.jpg?_nc_cat=108&ccb=1-5&_nc_sid=aee45a&_nc_eui2=AeHKFOJNC-_HqfFQ7ajwNzxBmuFpTU2_TS2a4WlNTb9NLT8_bJvaF9UJFgIRg6ZGgMQNsbjU04cQG7y8G2daxVd6&_nc_ohc=WmkJyDrj60YAX_fBHw3&_nc_ht=scontent.fmnl30-1.fna&oh=03_AVLYNhlU3FBCQ9tcv9ZZVL3P00NLvS2Y_J_ALONgvWDH_A&oe=61E222ED">
+    </div>
+    <div class="carousel__card">
+      <img class="carousel__img"
+           src="https://scontent.fmnl30-1.fna.fbcdn.net/v/t1.15752-9/p403x403/266396050_652252879295890_4507451855857575685_n.jpg?_nc_cat=108&ccb=1-5&_nc_sid=aee45a&_nc_eui2=AeG-E6OSfBQK53kuijhTELTzJtu28W1DAeUm27bxbUMB5dmFlKDFmFM8WQwpagPH-2fzawieZUIayoqQ6sbzwTGw&_nc_ohc=RW1AEIsrjvMAX_h7SUY&_nc_ht=scontent.fmnl30-1.fna&oh=03_AVLpJPacMYqhwqlhlGqqEibnvz33F5FhCqx_wPJ-02SbBA&oe=61E142D4">
+    </div>
+    <div class="carousel__card">
+      <img class="carousel__img"
+           src="https://scontent.fmnl30-1.fna.fbcdn.net/v/t1.15752-9/p403x403/264949207_504415491052436_4687627722206156033_n.jpg?_nc_cat=103&ccb=1-5&_nc_sid=aee45a&_nc_eui2=AeEGOk2htkOgLZuf02njvcNR4pbJ-uZXy4Tilsn65lfLhLzwaN1OwczojrD0vfAicYeZ05101q6swU-N5vA8KN21&_nc_ohc=BrwDmmLFwAIAX8PR5-9&_nc_ht=scontent.fmnl30-1.fna&oh=03_AVIbmyo41V4oqTMIQ3WxX7i2JLrpXG1UDfsRhFvSPHZqag&oe=61E02030">
+    </div>
+    <div class="carousel__card">
+      <img class="carousel__img"
+           src="https://scontent.fmnl30-2.fna.fbcdn.net/v/t1.15752-9/p403x403/263926491_594435991820848_2016514614915158185_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=aee45a&_nc_eui2=AeGbezyogbgEKx1hBU9n4E63YC06AiIMXkBgLToCIgxeQAg5WwKtzkMMcJVoDh9UD-4sNwF6JuMRdG6JRBIwm-5n&_nc_ohc=IE9-cRwaq9oAX9sjLP4&_nc_ht=scontent.fmnl30-2.fna&oh=03_AVLneu8VtYv-X8yEspzW_JwZaoVcm9uPiwuw3XuVGMJN2w&oe=61E23003">
+    </div>
+    <div class="carousel__card">
+      <img class="carousel__img"
+           src="https://scontent.fmnl30-2.fna.fbcdn.net/v/t1.15752-9/p403x403/265691684_276889347800793_1776886195428051785_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=aee45a&_nc_eui2=AeEV0x7ShUPDy1M2nVOoT3ar8JGKwKYzUm7wkYrApjNSbpI8CxmJqWm--U3wT3thVpYdDowpuxufMoXR5D5L4czH&_nc_ohc=yGYgtvrrpCQAX__mWQN&_nc_ht=scontent.fmnl30-2.fna&oh=03_AVJuA2yi8ptKDggHOLf-dsxYwDJzMaPw83YZKf5y77mN0A&oe=61E2A41E">
+    </div>
+    <div class="carousel__card">
+      <img class="carousel__img"
+           src="https://scontent.fmnl30-1.fna.fbcdn.net/v/t1.15752-9/p403x403/264358143_453290616290669_285272551928567453_n.jpg?_nc_cat=108&ccb=1-5&_nc_sid=aee45a&_nc_eui2=AeFPom52v48WgXPBa7Fta9vhb5u8NfxUPSdvm7w1_FQ9J9VHohskiYtB2D6kRCVjY5hNYiRPwD9AMKHm8neDpLt5&_nc_ohc=worXHpq6kmoAX8Y92vJ&_nc_ht=scontent.fmnl30-1.fna&oh=03_AVIRMXpg2_EB7E8D9Kr6TKg2jWGPy6gZbGRx-04FPbeoBA&oe=61E3384B">
+    </div>
+    <div class="carousel__card">
+      <img class="carousel__img"
+           src="https://scontent.fmnl30-2.fna.fbcdn.net/v/t1.15752-9/p403x403/266746464_6658747460863850_2478988865108965255_n.jpg?_nc_cat=100&ccb=1-5&_nc_sid=aee45a&_nc_eui2=AeE8-r1sfznjkVew96dYNKDwnYu6637zmPydi7rrfvOY_AV1ilwjEzWm1QDCyi6B2GnQFlMeNQexAUMVqnbknY4h&_nc_ohc=Agn1-YWxISEAX-UTG_Z&_nc_oc=AQkzcwaamGAvKZ6tRAHWaHeTvua32nTeFKzJ8awA9w3u_wyvXTRmiI0RYZPs9a4nbs8&_nc_ht=scontent.fmnl30-2.fna&oh=03_AVIzEtakieFtCLVVnP4OvP7a_-Q02kr71WfAqIXJD-Gc3w&oe=61E0CB72">
+    </div>
+
+  </div>
+  <div class="carousel__control">
+    <button class="carousel__btn carousel__btn--back">&#8678; Prev</button>
+    <button class="carousel__btn carousel__btn--next">Next &#8680;</button>
+  </div>
+</div>
+ 
+ 
+    <script>
+ const next = document.querySelector(".carousel__btn--next"),
+  back = document.querySelector(".carousel__btn--back"),
+  carousel = document.querySelector(".carousel__cards");
+let angle = 0;
+
+next.addEventListener("click", () => {
+  angle -= 45;
+  carousel.style.transform = `translateZ(-25rem) rotateY(${angle}deg)`;
+});
+
+back.addEventListener("click", () => {
+  angle += 45;
+  carousel.style.transform = `translateZ(-25rem) rotateY(${angle}deg)`;
+});
+
+    </script>
+</div>
+</body>
+</html>
