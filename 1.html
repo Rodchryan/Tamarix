@@ -1,304 +1,86 @@
-<!DOCTYPE html>
-<!--Code by Divinector (www.divinectorweb.com)-->
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>How to Create responsive Homepage</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&display=swap" rel="stylesheet">
 <style>
-* {
-	margin: 0;
-	padding: 0;
-}
-body {
-	font-family: 'Poppins', sans-serif;
-}
-.wrapper {
-	width: 1170px;
-	margin: auto;
-}
-header {
-	background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(https://scontent.fmnl30-2.fna.fbcdn.net/v/t1.6435-9/130715095_1771827352976254_812781986497444448_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=e3f864&_nc_eui2=AeFWqXyxNFGIv-WBCGh6cTqM0ZBRyAVTxkXRkFHIBVPGRTDFGUIek65OR4dwTjYyNCiEPcpuZj5LOKETXydG7ZeU&_nc_ohc=XY9fiv4nWzcAX-w2Z0e&_nc_ht=scontent.fmnl30-2.fna&oh=00_AT_NskrOzbUbSeiLP2d3oYqyvLIso7AwWW8rTJ2-5_PXZQ&oe=61E328CD);
-	height: 100vh;
-	-webkit-background-size: cover;
-	background-size: cover;
-	background-position: center center;
-	position: relative;
-}
-
-.welcome-text {
-	position: absolute;
-	width: 900px;
-	height: 300px;
-	margin: 20% 15%;
-	text-align: center;
-}
-.welcome-text h1 {
-	text-align: center;
-	color: #fff;
-	text-transform: uppercase;
-	font-size: 60px;
-}
-.welcome-text h1 span {
-	color: #00fecb;
-}
-.welcome-text a {
-	border: 1px solid #fff;
-	padding: 10px 25px;
-	text-decoration: none;
-	text-transform: uppercase;
-	font-size: 14px;
-	margin-top: 20px;
-	display: inline-block;
-	color: #fff;
-}
-.welcome-text a:hover {
-	background: #fff;
-	color: #333;
-}
-
-@media (max-width:600px) {
-	.wrapper {
-		width: 100%;
-	}
-	.logo {
-		float: none;
-		width: 50%;
-		text-align: center;
-		margin: auto;
-	}
-	img {
-		width: ;
-	}
-	.nav-area {
-		float: none;
-		margin-top: 0;
-	}
-	.nav-area li a {
-		padding: 5px;
-		font-size: 11px;
-	}
-	.nav-area {
-		text-align: center;
-	}
-	.welcome-text {
-		width: 100%;
-		height: auto;
-		margin: 30% 0;
-	}
-	.welcome-text h1 {
-		font-size: 30px;
-	}
+:root {
+  --clr-neon: hsl(317 100% 54%);
+  --clr-bg: hsl(323 21% 16%);
 }
 
 
-.btn a{
+.love {
+  min-height: 100vh;
+width: 100%;
   position: absolute;
-  color: #f5f5f5;
-  height: 70px;
-  width: 220px;
-  display: block;
-  text-align: center;
-  border-radius: 10px;
+  place-items: center;
+  background: var(--clr-bg);
+  font-family: "Balsamiq Sans", cursive;
+  color: var(--clr-neons);
+  padding-right: 10rem;
+}
+
+.neons-button {
+  font-size: 4rem;
+display: grid;
+  display: inline-block;
+  cursor: pointer;
   text-decoration: none;
-  background-image: linear-gradient(115deg,#4fcf70,#fad648,#a767e5,#12bcfe,#44ce7b);
+  color: var(--clr-neons);
+  border: var(--clr-neons) 0.125em solid;
+  padding: 0.25em 1em;
+  border-radius: 0.25em;
 
-margin: 40% 42%;
+  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
+
+  box-shadow: inset 0 0 0.5em 0 var(--clr-neons), 0 0 0.5em 0 var(--clr-neons);
+
+  position: relative;
+
 }
-.btn a:hover{
-  animation: rotate 0.4s linear infinite;
-}
-@keyframes rotate {
-  100%{
-    filter: hue-rotate(-360deg)
-  }
-}
-.btn a span{
-  height: 88%;
-  width: 96%;
-  background: #111;
-  display: block;
+
+.neons-button::before {
+  pointer-events: none;
+  content: "";
   position: absolute;
-  top: 50%;
-  left: 50%;
-  border-radius: 6px;
-  line-height: 62px;
-  font-size: 25px;
-  transform: translate(-50%, -50%);
+  background: var(--clr-neons);
+  top: 120%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  transform: perspective(1em) rotateX(40deg) scale(1, 0.35);
+  filter: blur(1em);
+  opacity: 0.7;
 }
 
-
-
-
-.neonText {
-padding: 1rem 1rem;
-text-align: center;
-
+.neons-button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 0 2em 0.5em var(--clr-neons);
+  opacity: 0;
+  background-color: var(--clr-neon);
+  z-index: -1;
+  transition: opacity 100ms linear;
 }
 
-.neonText h2 {
-font-size: 3rem;
-text-align: center;
-font-weight: bold;
-animation: light 1.5s ease-in-out infinite alternate;
+.neons-button:hover,
+.neons-button:focus {
+  color: var(--clr-bg);
+  text-shadow: none;
 }
 
-
-
-
-
-@keyframes light{
-from{
-color: blue;
-text-shadow: 0 0 10px #00fff2, 0 0
-20px #00fff2, 0 0 30px #00fff2, 0 0 40px
-#00fff2, 0 0 50px #00fff2, 0 0 60px
-#00fff2, 0 0 70px #00fff2, 0 0 90px
-#00fff2;
+.neons-button:hover::before,
+.neons-button:focus::before {
+  opacity: 1;
 }
-to{
-color: #fff;
-text-shadow: 0 0 20px #00fff2, 0 0
-30px #00fff2, 0 0 40px #00fff2, 0 0
-#00fff2, 0 0 60px #00fff2, 0 0 70px
-#00fff2, 0 0 80px #00fff2, 0 1 90px
-#00fff2;}
-}
-
-
-
-
-
-
-
-.wrapper{
-display: inline-flex;
-}
-
-.wrapper .static-txt{
-color: #fff;
-font-size: 60px;
-font-weight: 400;
-}
-
-.wrapper .dynamic-txts{
-margin-left: 15px;
-line-height: 90px;
-height: 90px;
-overflow: hidden;
-}
-
-.dynamic-txts li{
-color: #FC6D6D;
-list-style: none;
-font-size: 60px;
-font-weight: 500;
-position: relative;
-top: 0;
-animation: slide 14s steps(4) infinite;
-}
-
-@keyframes slide {
-100%{
-top: -360px;
-}
-}
-.dynamic-txts li span{
-position: relative;
-}
-
-.dynamic-txts li span::after{
-content:"";
-position: absolute;
-left: 0;
-height: 100%;
-width: 100%;
-background: black;
-border-left: 2px solid #FC6D6D;
-animation: typing 3.5s steps(10) infinite;
-}
-
-@keyframes typing {
-100%{
-left: 100%;
-margin: 0 -35px 0 35px;
-}
-}
-
-
-.puta{
-font-size: 80px;
-}
-
-.hui{
-display: flex;
-align-items: center;
-justify-content: center;
-min-height: 20vh;
-background: black;
-}
-
-.joey{
-position: absolute;
-top: 20%;
-left: 20%;
-
-}
-
-h4 {
-position: relative;
-font-size: 7vw;
-color: WHITE;
--webkit-text-stroke: 0.3vw #383d52;
-text-transform: uppercase;
-}
-
-h4::before {
-content: attr(data-text);
-position: absolute;
-top: 0;
-left: 0;
-width: 0;
-height: 100%;
-color: #01fe87;
--webkit-text-stroke: 0vw #383d52;
-border-right: 2px solid #01fe87;
-overflow: hidden;
-animation: cat 6s linear infinite;
-}
-
-@keyframes cat { 0%,10%,100%
-{ width: 0;
-}
-70%,90%
-{
-width: 100%;
-}
-
-.bobo {
-position: absolute;
-top: 80%;
-
-
+.neons-button:hover::after,
+.neons-button:focus::after {
+  opacity: 1;
 }
 </style>
 </head>
-
-<body>
-    <header>
-
-<div class="mainBox">
-<div class="neonText">
-<h2>Merry Christmas</h2>
-    <div class="wrapper">
-      
-
-<div class="welcome-text">
-        <h1>
-SCC <br><span>Samuel Christian College</span></h1>
-<a href="https://rodchryan.github.io/Tamarix/gal.html">Proceed</a>
-    </div>
-</header>
-
-</body>
-</html>
+<body><center><div class="love">
+<a href="#" class="neons-button">Neon</a></div>
